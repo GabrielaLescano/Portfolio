@@ -22,7 +22,7 @@ export const Navbar: React.FC = () => {
   return (
     <header className="fixed top-5 inset-x-0 z-50 flex justify-center px-4">
       <nav className="w-full max-w-4xl bg-zinc-900/70 backdrop-blur-md border border-zinc-800/80 rounded-full px-5 py-3 flex items-center justify-between shadow-2xl shadow-black/80 transition-all duration-300">
-        <a href="#hero" className="font-bold tracking-tight text-white hover:text-purple-400 transition-colors">
+        <a href="#hero" className="font-bold tracking-tight text-white hover:text-rose-700 transition-colors">
           GL<span className="text-rose-500">.</span>
         </a>
 

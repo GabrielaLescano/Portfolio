@@ -10,12 +10,12 @@ export const ExperienceCard: React.FC<ExperienceItem> = ({
   technologies,
 }) => {
   return (
-    <div className="relative pl-8 border-l border-zinc-800 group hover:border-purple-500/50 transition-colors">
-      <div className="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-zinc-700 group-hover:bg-purple-500 transition-colors" />
+    <div className="relative pl-8 border-l border-zinc-800 group hover:border-rose-500/50 transition-colors">
+      <div className="absolute -left-1.25 top-1.5 h-2.5 w-2.5 rounded-full bg-zinc-700 group-hover:bg-rose-500 transition-colors" />
 
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
         <h3 className="text-xl font-bold text-white">
-          {role} <span className="text-purple-400">@ {company}</span>
+          {role} <span className="text-rose-400">@ {company}</span>
         </h3>
         <span className="text-xs font-mono text-zinc-500 bg-zinc-900 px-3 py-1 rounded-full border border-zinc-800/80 w-fit">
           {period}
@@ -27,7 +27,7 @@ export const ExperienceCard: React.FC<ExperienceItem> = ({
       <ul className="space-y-2 mb-4 text-sm text-zinc-400 font-light">
         {description.map((item, idx) => (
           <li key={idx} className="flex items-start gap-2">
-            <span className="text-purple-500 mt-1">›</span>
+            <span className="text-rose-400 mt-1">›</span>
             <span>{item}</span>
           </li>
         ))}

@@ -7,7 +7,7 @@ export const RefactorPlayground: React.FC = () => {
   return (
     <section id="playground" className="py-20 px-6 max-w-5xl mx-auto">
       <h2 className="text-2xl font-bold text-white mb-2 flex items-center gap-3">
-        <span className="text-purple-500 font-mono text-lg">02.</span> Showcase de Arquitectura & Refactor
+        <span className="text-rose-700 font-mono text-lg">02.</span> Showcase de Arquitectura & Refactor
       </h2>
       <p className="text-zinc-400 text-sm mb-8">
         Muestra interactiva de la migración de componentes legados (jQuery) hacia React + TypeScript + Tests (Jest/RTL).
@@ -30,7 +30,7 @@ export const RefactorPlayground: React.FC = () => {
             onClick={() => setActiveTab('react')}
             className={`px-4 py-2 text-xs font-mono rounded-t-lg transition-colors ${
               activeTab === 'react'
-                ? 'bg-zinc-900 text-purple-400 border-t border-x border-zinc-800'
+                ? 'bg-zinc-900 text-rose-700 border-t border-x border-zinc-800'
                 : 'text-zinc-500 hover:text-zinc-300'
             }`}
           >
@@ -99,7 +99,7 @@ test('increments counter on click', () => {
             
             <div className="flex items-center gap-4 bg-zinc-900 p-4 rounded-2xl border border-zinc-800">
               <span className="text-sm font-medium text-zinc-300">Ítems en carrito:</span>
-              <span className="text-lg font-bold text-purple-400 font-mono px-3 py-1 bg-zinc-950 rounded-lg border border-zinc-800">
+              <span className="text-lg font-bold text-rose-700 font-mono px-3 py-1 bg-zinc-950 rounded-lg border border-zinc-800">
                 {cartCount}
               </span>
               <button

@@ -21,7 +21,7 @@ export const App: React.FC = () => {
 
         <section id="habilidades" className="py-20 px-6 max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold text-white mb-2 flex items-center gap-3">
-            <span className="text-purple-500 font-mono text-lg">.</span> Habilidades Técnicas
+            <span className="text-rose-500 font-mono text-lg">.</span> Habilidades Técnicas
           </h2>
           <p className="text-zinc-400 text-sm mb-12">Stack tecnológico y herramientas de productividad.</p>
 
@@ -46,7 +46,7 @@ export const App: React.FC = () => {
 
         <section id="educacion" className="py-20 px-6 max-w-5xl mx-auto">
           <h2 className="text-2xl font-bold text-white mb-2 flex items-center gap-3">
-            <span className="text-purple-500 font-mono text-lg">.</span> Educación & Formación
+            <span className="text-rose-500 font-mono text-lg">.</span> Educación & Formación
           </h2>
           <p className="text-zinc-400 text-sm mb-12">Estudios formales, certificaciones y background artístico.</p>
 
@@ -54,7 +54,7 @@ export const App: React.FC = () => {
             {EDUCATION.map((edu) => (
               <div key={edu.id} className="p-6 bg-zinc-900/40 rounded-2xl border border-zinc-800 flex flex-col justify-between">
                 <div>
-                  <span className="text-xs font-mono text-purple-400 bg-purple-950/60 px-2.5 py-1 rounded-md border border-purple-800/40">
+                  <span className="text-xs font-mono text-rose-400 bg-rose-950/60 px-2.5 py-1 rounded-md border border-rose-800/40">
                     {edu.type}
                   </span>
                   <h3 className="text-base font-bold text-white mt-4 mb-2">{edu.title}</h3>
