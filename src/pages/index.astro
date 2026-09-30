@@ -1,0 +1,97 @@
+---
+import '../index.css';
+
+// Importamos tus componentes con extensión explícita para evitar errores de compilación
+import { Navbar } from '../components/Navbar.tsx';
+import { Hero } from '../components/Hero.tsx';
+import { Experience } from '../components/Experience.tsx';
+import { SKILL_CATEGORIES, EDUCATION } from '../data/portfolioData.ts';
+---
+
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriela Lescano — Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-rose-900 selection:text-rose-100 relative overflow-x-hidden">
+    
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-rose-950/20 rounded-full blur-[128px]"></div>
+    <div class="absolute top-1/3 -right-40 w-[500px] h-[500px] bg-violet-950/15 rounded-full blur-[140px]"></div>
+    <div class="absolute -bottom-40 left-1/3 w-[600px] h-[600px] bg-zinc-900/30 rounded-full blur-[160px]"></div>
+    
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#18181b_1px,transparent_1px),linear-gradient(to_bottom,#18181b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-25"></div>
+    </div>
+
+    <Navbar client:load />
+
+    <main class="relative z-10">
+      <Hero />
+      <Experience />
+
+      <section id="habilidades" class="py-20 px-6 max-w-5xl mx-auto">
+        <h2 class="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+          <span class="text-rose-500 font-mono text-lg">.</span> Habilidades Técnicas
+        </h2>
+        <p class="text-zinc-400 text-sm mb-12">Stack tecnológico y herramientas de productividad.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {SKILL_CATEGORIES.map((category) => (
+            <div class="p-6 bg-zinc-900/60 rounded-2xl border border-zinc-800">
+              <h3 class="text-lg font-semibold text-white mb-4">{category.title}</h3>
+              <div class="flex flex-wrap gap-2">
+                {category.skills.map((skill) => (
+                  <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-zinc-950 text-zinc-300 border border-zinc-800/80">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="educacion" class="py-20 px-6 max-w-5xl mx-auto">
+        <h2 class="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+          <span class="text-rose-500 font-mono text-lg">.</span> Educación & Formación
+        </h2>
+        <p class="text-zinc-400 text-sm mb-12">Estudios formales, certificaciones y background artístico.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {EDUCATION.map((edu) => (
+            <div class="p-6 bg-zinc-900/40 rounded-2xl border border-zinc-800 flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-mono text-rose-400 bg-rose-950/60 px-2.5 py-1 rounded-md border border-rose-800/40">
+                  {edu.type}
+                </span>
+                <h3 class="text-base font-bold text-white mt-4 mb-2">{edu.title}</h3>
+                <p class="text-xs text-zinc-400">{edu.institution}</p>
+              </div>
+              <span class="text-xs font-mono text-zinc-500 mt-6">{edu.year}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="contacto" class="py-24 px-6 max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-extrabold text-white mb-4">¿Hablamos de tu próximo proyecto?</h2>
+        <p class="text-zinc-400 mb-8 leading-relaxed font-light">
+          Estoy disponible para roles de Frontend Developer enfocados en React, TypeScript y diseño de experiencias digitales excepcionales.
+        </p>
+        <a
+          href="mailto:lesc.gabriela@gmail.com"
+          class="inline-block px-8 py-4 rounded-xl bg-gradient-to-r from-rose-900 to-rose-950 hover:from-rose-800 hover:to-rose-900 text-rose-100 font-medium text-sm border border-rose-700/50 shadow-lg shadow-rose-950/50 transition-all duration-300 items-center gap-2 group"
+        >
+          Enviar mensaje
+        </a>
+      </section>
+    </main>
+
+    <footer class="py-8 text-center text-xs text-zinc-600 border-t border-zinc-900 relative z-10">
+      © {new Date().getFullYear()} Gabriela Lescano · Diseñado con React, TypeScript & Tailwind CSS
+    </footer>
+  </body>
+</html>
