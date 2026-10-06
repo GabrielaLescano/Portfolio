@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 const NAV_ITEMS = [
   { label: 'Perfil', href: '#hero' },
   { label: 'Experiencia', href: '#experiencia' },
-  //{ label: 'Playground', href: '#playground' },
+  { label: 'Proyectos', href: '#proyectos' },
   { label: 'Habilidades', href: '#habilidades' },
   { label: 'Educación', href: '#educacion' },
   { label: 'Contacto', href: '#contacto' },
