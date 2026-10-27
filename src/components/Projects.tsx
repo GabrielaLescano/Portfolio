@@ -4,21 +4,24 @@ import { GithubIcon } from '../assets/icons/GithubIcon';
 const DEMO_URL = 'https://orbita-me.vercel.app';
 const REPO_URL = 'https://github.com/GabrielaLescano/orbita';
 
-const STACK_ACTUAL = ['Next.js (App Router)', 'TypeScript', 'Tailwind CSS', 'Vercel'];
-const STACK_PROXIMO = ['Auth.js', 'Drizzle ORM', 'Neon (Postgres)'];
+const STACK_ACTUAL = ['Next.js (App Router)', 'TypeScript', 'Tailwind CSS', 'Vercel', 'Auth.js', 'Drizzle ORM', 'Neon (Postgres)'];
+//const STACK_PROXIMO = [""];
 
 const HECHO = [
   'Diseño de la interfaz y prototipo del perfil, responsive',
   'Panel de temas: los colores cambian en vivo con variables CSS',
   'Reproductor con interfaz completa (el audio todavía es simulado)',
   'Deploy en Vercel',
+  'Login y base de datos Postgres',
+  'HTML y CSS propios por perfil, con sanitizado y iframe aislado',
+  'Comentarios y Top 8 reales',
 ];
 
 const EN_CAMINO = [
-  'Login con GitHub y base de datos Postgres',
-  'HTML y CSS propios por perfil, con sanitizado y iframe aislado',
+  'Valores reales en la card del usuario',
   'Reproductor con embeds de servicios de música',
-  'Comentarios y Top 8 reales',
+  'Visualización de cómo va a quedar el HTML que estamos trabajando',
+  'Notificaciones de solicitudes de amistad y comentarios',
 ];
 
 export const Projects: React.FC = () => {
@@ -90,7 +93,7 @@ export const Projects: React.FC = () => {
                 {tech}
               </span>
             ))}
-            {STACK_PROXIMO.map((tech) => (
+            {/* {STACK_PROXIMO.map((tech) => (
               <span
                 key={tech}
                 title="Próximamente"
@@ -98,7 +101,7 @@ export const Projects: React.FC = () => {
               >
                 {tech}
               </span>
-            ))}
+            ))} */}
           </div>
 
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
