@@ -14,14 +14,13 @@ const HECHO = [
   'Deploy en Vercel',
   'Login y base de datos Postgres',
   'HTML y CSS propios por perfil, con sanitizado y iframe aislado',
-  'Comentarios y Top 8 reales',
+  'Comentarios, Top 8 y datos de la card reales',
+  'Notificaciones de solicitudes de amistad y comentarios',
 ];
 
 const EN_CAMINO = [
-  'Valores reales en la card del usuario',
   'Reproductor con embeds de servicios de música',
   'Visualización de cómo va a quedar el HTML que estamos trabajando',
-  'Notificaciones de solicitudes de amistad y comentarios',
 ];
 
 export const Projects: React.FC = () => {
